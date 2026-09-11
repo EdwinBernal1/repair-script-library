@@ -1,142 +1,147 @@
 [
-	{
-		"id" : "win-dhcp-fix",
-		"path" : "src/windows/win-dhcp-fix.ps1",
-		"description" : "DHCP Service fixer offline from rescue VM"
- 	},
-	{
-		"id" : "win-sac-on",
-		"path" : "src/windows/sac-enabler.ps1",
-		"description" : "Enables serial access console offline from a rescue VM on GEN1 and GEN2 windows VMs"
-	},
-	{
-		"id" : "win-LKGC",
-		"path" : "src/windows/win-LKGC.ps1",
-		"description" : "Last Known Good Configuration enabler offline from rescue VM"
-	},
-	{
-		"id" : "win-GA-fix",
-		"path" : "src/windows/GA_offlinefixer.ps1",
-		"description" : "Fixes integrity of files and registry from windows guest agent offline"
-	},
-	{
-		"id" : "win-hello-world",
-		"path" : "src/windows/win-hello-world.ps1",
-		"description" : "Hello world test script"
-	},
-	{
-		"id" : "linux-hello-world",
-		"path" : "src/linux/linux-hello-world.sh",
-		"description" : "Hello world test script"
-	},
-	{
-		"id" : "win-error-test",
-		"path" : "src/windows/win-error-test.ps1",
-		"description" : "Error test script"
-	},
-	{
-		"id" : "linux-error-test",
-		"path" : "src/linux/linux-error-test.sh",
-		"description" : "Error test script"
-	},
-	{
-		"id" : "win-chkdsk-fs-corruption",
-		"path" : "src/windows/win-chkdsk-fs-corruption.ps1",
-		"description" : "Runs chkdsk to fix file system corruption"
-	},
-	{
-		"id" : "win-sfc-sf-corruption",
-		"path" : "src/windows/win-sfc-sf-corruption.ps1",
-		"description" : "Runs sfc to fix system file corruption"
-	},
-	{
-		"id" : "win-bcdedit-ignoreAllFailure",
-		"path" : "src/windows/win-ignoreAllFailures.ps1",
-		"description" : "Ignore errors if there is a failed boot, failed shutdown, or failed checkpoint. The computer will attempt to boot normally after an error occurs."
-	},
-	{
-		"id" : "linux-alar-fki",
-		"path" : "src/linux/linux-alar2.sh",
-		"description" : "This ID is deprectated. Please use 'linux-alar2' instead. For backward compatibility it will use the linux-alar2 ID automatically."
-	},
-    	{
-		"id" : "linux-alar2",
-		"path" : "src/linux/linux-alar2.sh",
-		"description" : "alar2 allows to recover a failed VM. Various ations are available like: fstab, initrd and kernel. NOTE: use option --run-on-repair. See the docu for more details: https://github.com/Azure/repair-script-library/blob/master/src/linux/common/helpers/alar2/README.md. The script takes around 2min to run."
-    	},
-	{
-		"id" : "win-enable-nested-hyperv",
-		"path" : "src/windows/win-enable-nested-hyperv.ps1",
-		"description" : "Enables nested hyperV using attached data disk as OS disk."
-	},
-	{
-		"id" : "win-toggle-safe-mode",
-		"path" : "src/windows/win-toggle-safe-mode.ps1",
-		"description" : "Disable Safe Mode if your Windows VM is booting in Safe Mode. Also activates Safe Mode if you require it (e.g. to uninstall certain software)."
-	},
-	{
-		"id" : "win-dumpconfigurator",
-		"path" : "src/windows/win-dumpconfigurator.ps1",
-		"description" : "Changes the dump configuration of a VM while its running without the need to reboot it. Which is to say, you can change the dump configuration from Kernel to Full without a reboot."
-	},
-	{
-		"id" : "win-collect-attached-disk-logs",
-		"path" : "src/windows/win-collect-attached-disk-logs.ps1",
-		"description" : "Collect OS logs from an OS disk attached to a Rescue VM as an Azure Data Disk."
-	},
-	{
-		"id" : "win-create-troubleshooting-user",
-		"path" : "src/windows/win-create-troubleshooting-user.ps1",
-		"description" : "Create a new user account with administrator privileges. This can be used to troubleshoot a VM without an accessible administrative account."
-	},
-	{
-		"id" : "win-get-patches",
-		"path" : "src/windows/win-get-patches.ps1",
-		"description" : "Get installed Windows patches for the nested Hyper-V server on a Rescue VM using DISM."
-	},
-	{
-		"id" : "win-remove-patch",
-		"path" : "src/windows/win-remove-patch.ps1",
-		"description" : "Remove an installed Windows patch for the nested Hyper-V server on a Rescue VM using DISM. This will be helpful if the attached OS disk is from a VM that is in a nonboot state due to corrupted/failing updates."
-	},
-	{
-		"id" : "win-get-apps",
-		"path" : "src/windows/win-get-apps.ps1",
-		"description" : "Get Windows applications for the nested Hyper-V machine that can be uninstalled from the Rescue VM."
-	},
-	{
-		"id" : "win-remove-app",
-		"path" : "src/windows/win-remove-app.ps1",
-		"description" : "Remove an installed Windows application from the nested Hyper-V machine."
-	},
-	{
-		"id": "win-update-registry",
-		"path": "src/windows/win-update-registry.ps1",
-		"description": "Modify the registry on an OS disk attached to a Rescue VM as an Azure Data Disk."
-	},
-	{
-		"id": "win-crowdstrike-fix-bootloop",
-		"path": "src/windows/win-crowdstrike-fix-bootloop.ps1",
-		"description": "Workaround for machines stuck in boot loop due to corrupt crowdstrike falcon sensor 2024-07-19 by removing corrupt crowdstrike files, loading/unloading the registry hives, and removing regtrans-ms and txr.blf files under config\\TxR folder"
-	},
-	{
-		"id": "win-crowdstrike-fix-bootloop-v2",
-		"path": "src/windows/win-crowdstrike-fix-bootloop-v2.ps1",
-		"description": "Workaround for machines stuck in boot loop due to corrupt crowdstrike falcon sensor 2024-07-19 by removing corrupt crowdstrike files, loading/unloading the registry hives, and removing regtrans-ms and txr.blf files under config\\TxR folder"
-	},
-	{
-		"id": "win-crowdstrike-fix-bootloop-cvm",
-		"path": "src/windows/win-crowdstrike-fix-bootloop-cvm.ps1",
-		"description": "Workaround for cvm machines stuck in boot loop due to corrupt crowdstrike falcon sensor 2024-07-19 by removing corrupt crowdstrike files"
-	},
-	{
-		"id": "win-detect-nvme-readiness",
-		"path": "src/windows/win-detect-nvme-readiness.ps1",
-		"description": "Read-only check of whether a Windows OS disk can boot from an NVMe disk controller. Reports the stornvme boot-start value, driver presence and CriticalDeviceDatabase entries, and writes an evidence bundle. Makes no changes. NOTE: use option --run-on-repair."
-	},
-	{
-		"id": "linux-detect-nvme-readiness",
-		"path": "src/linux/linux-detect-nvme-readiness.sh",
-		"description": "Read-only check of whether a Linux OS disk can boot from an NVMe disk controller. Reports unstable /dev/sd* references in /etc/fstab, whether the initramfs contains an NVMe driver, and the dracut hostonly setting. Makes no changes. NOTE: use option --run-on-repair."
-	}
+  {
+    "id": "win-dhcp-fix",
+    "path": "src/windows/win-dhcp-fix.ps1",
+    "description": "DHCP Service fixer offline from rescue VM"
+  },
+  {
+    "id": "win-sac-on",
+    "path": "src/windows/sac-enabler.ps1",
+    "description": "Enables serial access console offline from a rescue VM on GEN1 and GEN2 windows VMs"
+  },
+  {
+    "id": "win-LKGC",
+    "path": "src/windows/win-LKGC.ps1",
+    "description": "Last Known Good Configuration enabler offline from rescue VM"
+  },
+  {
+    "id": "win-GA-fix",
+    "path": "src/windows/GA_offlinefixer.ps1",
+    "description": "Fixes integrity of files and registry from windows guest agent offline"
+  },
+  {
+    "id": "win-hello-world",
+    "path": "src/windows/win-hello-world.ps1",
+    "description": "Hello world test script"
+  },
+  {
+    "id": "linux-hello-world",
+    "path": "src/linux/linux-hello-world.sh",
+    "description": "Hello world test script"
+  },
+  {
+    "id": "win-error-test",
+    "path": "src/windows/win-error-test.ps1",
+    "description": "Error test script"
+  },
+  {
+    "id": "linux-error-test",
+    "path": "src/linux/linux-error-test.sh",
+    "description": "Error test script"
+  },
+  {
+    "id": "win-chkdsk-fs-corruption",
+    "path": "src/windows/win-chkdsk-fs-corruption.ps1",
+    "description": "Runs chkdsk to fix file system corruption"
+  },
+  {
+    "id": "win-sfc-sf-corruption",
+    "path": "src/windows/win-sfc-sf-corruption.ps1",
+    "description": "Runs sfc to fix system file corruption"
+  },
+  {
+    "id": "win-bcdedit-ignoreAllFailure",
+    "path": "src/windows/win-ignoreAllFailures.ps1",
+    "description": "Ignore errors if there is a failed boot, failed shutdown, or failed checkpoint. The computer will attempt to boot normally after an error occurs."
+  },
+  {
+    "id": "linux-alar-fki",
+    "path": "src/linux/linux-alar2.sh",
+    "description": "This ID is deprectated. Please use 'linux-alar2' instead. For backward compatibility it will use the linux-alar2 ID automatically."
+  },
+  {
+    "id": "linux-alar2",
+    "path": "src/linux/linux-alar2.sh",
+    "description": "alar2 allows to recover a failed VM. Various ations are available like: fstab, initrd and kernel. NOTE: use option --run-on-repair. See the docu for more details: https://github.com/Azure/repair-script-library/blob/master/src/linux/common/helpers/alar2/README.md. The script takes around 2min to run."
+  },
+  {
+    "id": "win-enable-nested-hyperv",
+    "path": "src/windows/win-enable-nested-hyperv.ps1",
+    "description": "Enables nested hyperV using attached data disk as OS disk."
+  },
+  {
+    "id": "win-toggle-safe-mode",
+    "path": "src/windows/win-toggle-safe-mode.ps1",
+    "description": "Disable Safe Mode if your Windows VM is booting in Safe Mode. Also activates Safe Mode if you require it (e.g. to uninstall certain software)."
+  },
+  {
+    "id": "win-dumpconfigurator",
+    "path": "src/windows/win-dumpconfigurator.ps1",
+    "description": "Changes the dump configuration of a VM while its running without the need to reboot it. Which is to say, you can change the dump configuration from Kernel to Full without a reboot."
+  },
+  {
+    "id": "win-collect-attached-disk-logs",
+    "path": "src/windows/win-collect-attached-disk-logs.ps1",
+    "description": "Collect OS logs from an OS disk attached to a Rescue VM as an Azure Data Disk."
+  },
+  {
+    "id": "win-create-troubleshooting-user",
+    "path": "src/windows/win-create-troubleshooting-user.ps1",
+    "description": "Create a new user account with administrator privileges. This can be used to troubleshoot a VM without an accessible administrative account."
+  },
+  {
+    "id": "win-get-patches",
+    "path": "src/windows/win-get-patches.ps1",
+    "description": "Get installed Windows patches for the nested Hyper-V server on a Rescue VM using DISM."
+  },
+  {
+    "id": "win-remove-patch",
+    "path": "src/windows/win-remove-patch.ps1",
+    "description": "Remove an installed Windows patch for the nested Hyper-V server on a Rescue VM using DISM. This will be helpful if the attached OS disk is from a VM that is in a nonboot state due to corrupted/failing updates."
+  },
+  {
+    "id": "win-get-apps",
+    "path": "src/windows/win-get-apps.ps1",
+    "description": "Get Windows applications for the nested Hyper-V machine that can be uninstalled from the Rescue VM."
+  },
+  {
+    "id": "win-remove-app",
+    "path": "src/windows/win-remove-app.ps1",
+    "description": "Remove an installed Windows application from the nested Hyper-V machine."
+  },
+  {
+    "id": "win-update-registry",
+    "path": "src/windows/win-update-registry.ps1",
+    "description": "Modify the registry on an OS disk attached to a Rescue VM as an Azure Data Disk."
+  },
+  {
+    "id": "win-crowdstrike-fix-bootloop",
+    "path": "src/windows/win-crowdstrike-fix-bootloop.ps1",
+    "description": "Workaround for machines stuck in boot loop due to corrupt crowdstrike falcon sensor 2024-07-19 by removing corrupt crowdstrike files, loading/unloading the registry hives, and removing regtrans-ms and txr.blf files under config\\TxR folder"
+  },
+  {
+    "id": "win-crowdstrike-fix-bootloop-v2",
+    "path": "src/windows/win-crowdstrike-fix-bootloop-v2.ps1",
+    "description": "Workaround for machines stuck in boot loop due to corrupt crowdstrike falcon sensor 2024-07-19 by removing corrupt crowdstrike files, loading/unloading the registry hives, and removing regtrans-ms and txr.blf files under config\\TxR folder"
+  },
+  {
+    "id": "win-crowdstrike-fix-bootloop-cvm",
+    "path": "src/windows/win-crowdstrike-fix-bootloop-cvm.ps1",
+    "description": "Workaround for cvm machines stuck in boot loop due to corrupt crowdstrike falcon sensor 2024-07-19 by removing corrupt crowdstrike files"
+  },
+  {
+    "id": "win-detect-nvme-readiness",
+    "path": "src/windows/win-detect-nvme-readiness.ps1",
+    "description": "Read-only check of whether a Windows OS disk can boot from an NVMe disk controller. Reports the stornvme boot-start value, driver presence and CriticalDeviceDatabase entries, and writes an evidence bundle. Makes no changes. NOTE: use option --run-on-repair."
+  },
+  {
+    "id": "linux-detect-nvme-readiness",
+    "path": "src/linux/linux-detect-nvme-readiness.sh",
+    "description": "Read-only check of whether a Linux OS disk can boot from an NVMe disk controller. Reports unstable /dev/sd* references in /etc/fstab, whether the initramfs contains an NVMe driver, and the dracut hostonly setting. Makes no changes. NOTE: use option --run-on-repair."
+  },
+  {
+    "id": "win-enable-nvme-boot-driver",
+    "path": "src/windows/win-enable-nvme-boot-driver.ps1",
+    "description": "PREVIEW-ONLY test entry. Enable the Windows inbox NVMe storage driver on the boot path of an offline OS disk. Mode=Report (default) makes no changes; Mode=Repair writes; Mode=Rollback restores a backup. NOTE: use option --run-on-repair."
+  }
 ]
